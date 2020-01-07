@@ -1,0 +1,103 @@
+nav.nav {
+    position: fixed;
+    width: 100%;
+    background-color: black;
+    height: 90px;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1;
+}
+
+input.input {
+    position: fixed;
+    background-color: #7DA0E0;
+    width: 27vw;
+    height: 50px;
+    top: 15px;
+    left: 100px;
+    border-radius: 5px 5px 5px 5px;
+    font-size: 15px;
+    font-family: Monospaced;
+    padding-left: 50px;
+    color: white;
+}
+
+::-webkit-input-placeholder {
+    position: fixed;
+    color: #FFFFFF;
+    font-size: 15px;
+    font-family: Monospaced;
+}
+
+#circle {
+    position: fixed;
+    top: 25px;
+    left: 35px;
+    z-index: 2;
+}
+
+#mag {
+    position: fixed;
+    top: 30px;
+    left: 110px;
+    z-index: 2;
+    max-width: 26px;
+}
+
+.nav_list {
+    position: fixed;
+    display: inline;
+    color: white;
+    font-size: 17px;
+    font-weight: 100;
+    top: 30px;
+    z-index:4;
+}
+
+#li1, #li2, #li3 {
+    position: fixed;
+}
+
+#li1 {
+    right: 330px;
+}
+
+#li2 {
+    right: 200px;
+}
+
+#li3 {
+    right: 100px;
+}
+
+.main {
+    position: absolute;
+    top: 130px;
+    left: 0;
+    right: 0;
+    width: 100%;
+}
+
+.container {
+    position: relative;
+    width: 380px;
+    height: 190px;
+    border: 1px solid #ccc;
+    float: left;
+    margin-bottom: 50px;
+    margin-right: 40px;
+    left: 7%;
+    right: 15%;
+    border-radius: 10px 10px 10px 10px;
+    background-color: #E5ECFC;
+}
+
+footer.footer {
+    display: none;
+    position: fixed;
+}
+
+#home_btn, #following_btn, #saved_btn {
+    display: none;
+}

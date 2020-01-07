@@ -1,0 +1,99 @@
+html {
+    background-color: #b87e5c;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+}
+
+#playground {
+    position: absolute;
+    top: 75px;
+    margin: 0 auto;
+}
+
+.ground {
+    width: 49%;
+    height: 49%;
+    float: left;
+    background-color: #c19867;
+    margin-bottom: 2px;
+    margin-left: 1px;
+}
+
+#timer {
+    position: absolute;
+    z-index: 3;
+    font-family: Monaco;
+    top: 8px;
+    font-size: 20px;
+}
+
+.blink {
+    animation: blink-animation 1.5s steps(20, start) infinite;
+    -webkit-animation: blink-animation 1.5s steps(20, start) infinite;
+}
+
+@keyframes blink-animation {
+    from {
+        background-color: green;
+        opacity: 100%;
+    }
+    to {
+        background-color: green;
+        opacity: 30%;
+    }
+}
+
+@-webkit-keyframes blink-animation {
+    from {
+        opacity: 100%;
+    }
+    to {
+        opacity: 30%;
+    }
+}
+
+.bead {
+    border-radius: 50%;
+    background: rgba(193, 102, 143, 0.3);
+    padding: 1px;
+    border-style: solid;
+    border-color: #c18858;
+    float: left;
+    margin: 10px 5px 15px 15px;
+}
+
+.arrow {
+    z-index: 40;
+    margin-bottom: 200px;
+    width: 25%;
+    height: 30px;
+    float: left;
+    font-family: AppleGothic;
+    display: none;
+    opacity: 50%;
+    color: black;
+}
+
+.up, .down {
+    height: 30px;
+}
+
+#rotate {
+    height: 50px;
+}
+
+.rotatingCW {
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-name: rotatingCW1;
+}
+
+.rotatingCCW {
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-name: rotatingCCW1;
+}
+

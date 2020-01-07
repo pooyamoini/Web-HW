@@ -1,0 +1,421 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+.stage {
+    background-color: rgb(42, 40, 46);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+.scene {
+    position: relative;
+    height: 290px;
+    width: 290px;
+}
+
+.inner-halo {
+    background-color: rgb(59, 59, 38);
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 290px;
+    width: 290px;
+    border-radius: 50%;
+    /*animations*/
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-name: change_inner_halo;
+}
+
+.inner1-halo {
+    position: absolute;
+    top: -30px;
+    left: -30px;
+    bottom: 0;
+    right: 0;
+    height: 350px;
+    width: 350px;
+    border-radius: 50%;
+}
+
+.line_0, .line_1, .line_2 {
+    overflow: hidden;
+    position: absolute;
+    top: -0.5em;
+    right: 50%;
+    bottom: 50%;
+    left: -0.5em;
+    transform-origin: 100% 100%;
+}
+
+.line_0 {
+    /*animations*/
+    animation-name: rotating_spark;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes rotating_spark {
+    0%, 100% {
+        top: -0.25em;
+        left: -0.25em;
+        transform: rotate(-10deg) skewX(30deg);
+        opacity: 0.1;
+    }
+    50% {
+        top: -2.5em;
+        left: -2.5em;
+        transform: rotate(360deg) skewX(30deg);
+        opacity: 1;
+    }
+}
+
+.line_1 {
+    /*animations*/
+    animation-name: rotating_spark1;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes rotating_spark1 {
+    0%, 100% {
+        top: -1.25em;
+        left: -1.25em;
+        transform: rotate(30deg) skewX(30deg);
+        opacity: 0.5;
+    }
+    50% {
+        top: -3.5em;
+        left: -3.5em;
+        transform: rotate(320deg) skewX(30deg);
+        opacity: 1;
+    }
+}
+
+.line_2 {
+    /*animations*/
+    animation-name: rotating_spark2;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes rotating_spark2 {
+    0%, 100% {
+        top: -2.1em;
+        left: -2.1em;
+        transform: rotate(-30deg) skewX(30deg);
+        opacity: 0.6;
+    }
+    50% {
+        top: -4.5em;
+        left: -4.5em;
+        transform: rotate(350deg) skewX(30deg);
+        opacity: 1;
+    }
+}
+
+.line_0:before, .line_1:before, .line_2:before {
+    box-sizing: border-box;
+    display: block;
+    border: solid 0.5em rgb(59, 59, 38);
+    width: 200%;
+    height: 200%;
+    border-radius: 50%;
+    transform: skewX(-30deg);
+    content: '';
+}
+
+@keyframes change_inner_halo {
+    0%, 100% {
+        width: 290px;
+        height: 290px;
+        top: 0;
+        left: 0;
+    }
+    50% {
+        top: -7px;
+        left: -7px;
+        width: 305px;
+        height: 305px;
+    }
+}
+
+.outer-halo {
+    background-color: rgba(70, 70, 35, 0.329);
+    position: absolute;
+    height: 310px;
+    width: 310px;
+    top: -10px;
+    left: -10px;;
+    border-radius: 50%;
+    /*animations*/
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-delay: 1s;
+    animation-name: change_outer_halo;
+}
+
+@keyframes change_outer_halo {
+    0% {
+        height: 310px;
+        width: 310px;
+    }
+    50% {
+        left: -18px;
+        top: -18px;
+        height: 326px;
+        width: 326px;
+    }
+    100% {
+        height: 310px;
+        width: 310px;
+        top: -10px;
+        left: -10px;
+    }
+}
+
+.fireflybody {
+    background-color: rgb(61, 23, 61);
+    box-shadow: inset 0 -50px 0.7em 0 rgba(226, 230, 6, 0.4);
+    position: absolute;
+    height: 100px;
+    width: 80px;
+    top: 75%;
+    left: 50%;
+    border-radius: 50% 50% 50% 50% / 70% 70% 40% 40%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    /*animations*/
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+    animation-name: change_light;
+}
+
+@keyframes change_light {
+    from {
+        box-shadow: inset 0 -50px 0.7em 0 rgba(226, 230, 6, 0.4);
+    }
+    to {
+        box-shadow: inset 0 -50px 0.7em 0 rgba(226, 230, 6, 0.7);
+    }
+}
+
+.tentacle_left, .tentacle_right {
+    border-left: 3px solid rgb(88, 42, 88);;
+    height: 100px;
+    position: absolute;
+    left: 50%;
+    margin-left: -3px;
+    top: 13%;
+    z-index: 4;
+}
+
+.tentacle_left {
+    left: 32%;
+    transform: rotate(-30deg);
+}
+
+.tentacle_right {
+    left: 68%;
+    transform: rotate(30deg);
+}
+
+.nose {
+    /*border-left: 2px solid rgba(0, 0, 0, 0.3);;*/
+    /*height: 35px;*/
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    opacity: 0.55;
+    border: solid rgba(255, 255, 255, 0.85);
+    background-color: white;
+    position: absolute;
+    left: 43%;
+    top: 58%;
+    z-index: 5;
+}
+
+.lips {
+    border-bottom: 1px solid rgb(0, 0, 0);
+    /*border-left: 10px solid rgb(0, 0, 0);*/
+    width: 30px;
+    opacity: 0.55;
+    background-color: white;
+    position: absolute;
+    border-radius: 90%;
+    left: 36%;
+    top: 65%;
+    z-index: 5;
+}
+
+.smile {
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+}
+
+.half-circle {
+    position: absolute;
+    height: 15px;
+    width: 7px;
+    border-radius: 15px 2px 2px 15px;
+    border-top: 1px solid #000;
+    border-left: 1px solid #000;
+    border-bottom: 1px solid #000;
+    top: 62%;
+    left: 47%;
+    transform: rotate(-90deg);
+    z-index: 5;
+    /*animations*/
+    animation-name: smile;
+    animation-iteration-count: infinite;
+    animation-duration: 10s;
+}
+
+@keyframes smile {
+    0%, 50%, 100% {
+        top: 62%;
+        transform: rotate(-90deg);
+    }
+
+    51%, 99% {
+        top: 63%;
+        transform: rotate(90deg);
+    }
+}
+
+.wing {
+    background-color: rgb(241, 203, 234);
+    position: absolute;
+    height: 20px;
+    width: 200px;
+    top: 65%;
+    left: 50%;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    /*animations*/
+    animation-name: wings;
+    animation-duration: 100ms;
+    animation-iteration-count: infinite;
+}
+
+@keyframes wings {
+    0%, 100% {
+        transform: translate(-50%, -50%) rotate(0deg)
+    }
+    25% {
+        transform: translate(-50%, -50%) rotate(30deg)
+    }
+
+    75% {
+        transform: translate(-50%, -50%) rotate(-30deg)
+    }
+}
+
+.face {
+    background-color: rgb(88, 42, 88);
+    position: absolute;
+    height: 90px;
+    width: 90px;
+    top: 53%;
+    left: 50%;
+    border-radius: 50% 50% 50% 50% / 40% 40% 60% 60%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+}
+
+.firefly-container {
+    position: relative;
+    height: 300px;
+    width: 100px;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    /*animations*/
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-name: move_body;
+}
+
+@keyframes move_body {
+    0%, 100% {
+        top: 35%;
+    }
+    25% {
+        top: calc(35% - 10px);
+    }
+    75% {
+        top: calc(35% + 10px);
+    }
+}
+
+.eye {
+    --bg: rgb(61, 27, 80);
+    background: var(--bg);
+    border: 2px solid var(--bg);
+    box-shadow: 0 0 5px rgba(0, 0, 0, .25);
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    top: 45%;
+    left: calc(50% - 25px);
+    border-radius: 50%;
+    z-index: 4;
+    overflow: hidden;
+}
+
+.eyeball {
+    background: rgb(238, 238, 238);
+    position: absolute;
+    height: 100%;
+    width: 150%;
+    left: 50%;
+    top: 50%;
+    border-radius: 50%;
+    transform: translate(-50%, -30%);
+    /*animations*/
+    animation-duration: 10s;
+    animation-name: closing_eyes;
+    animation-iteration-count: infinite;
+}
+
+@keyframes closing_eyes {
+    0% {
+        top: 30%;
+        margin-top: 0;
+    }
+    5% {
+        margin-top: 100%;
+    }
+    10% {
+        top: 50%;
+        margin-top: 0;
+    }
+}
+
+.pupil {
+    background-color: rgb(14, 13, 13);
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.eye:nth-child(1) {
+    transform: translateX(-35px) rotateZ(-10deg);
+}
+
+.eye:nth-child(2) {
+    transform: translateX(35px) rotateZ(10deg);
+}

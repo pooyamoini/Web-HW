@@ -1,0 +1,38 @@
+#container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#pic {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: gray;
+}
+
+
+img {
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: contain;
+}
+
+footer {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+}
+
+footer p {
+    position: absolute;
+    font-size: 25px;
+    margin: 0 auto;
+    bottom: 100px;
+    font-family: Chalkboard;
+}

@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: arial, sans-serif;
+    font-size: 100%;
+    margin: 3em;
+    background: #666;
+    color: #fff;
+}
+
+#color_selector, #color_selector2 {
+    position: absolute;
+    right: 285px;
+    width: 40px;
+    height: 40px;
+    top: 39px;
+}
+
+p {
+    font-size: 17px;
+    font-family: "Chalkboard SE";
+    max-height: 100px;
+    word-wrap: break-word;
+    white-space: initial;
+}
+
+ul, li {
+    list-style: none;
+}
+
+ul {
+    position: absolute;
+    overflow: hidden;
+    padding: 3em;
+    top: 150px;
+}
+
+.card {
+    word-wrap: break-word;
+    text-overflow: ellipsis;
+    color: #000;
+    background: #ffc;
+    height: 15em;
+    width: 15em;
+    padding: 1em;
+    border-radius: 15px;
+}
+
+ul li {
+    margin: 1em;
+    float: left;
+}
+
+.input, .input2 {
+    position: absolute;
+    width: 60%;
+    height: 40px;
+    margin: 0 auto;
+    font-size: 20px;
+    font-family: Cochin;
+    border: solid #666666 3px;
+    padding-left: 10px;
+}
+
+#for_input {
+    display: flex;
+    justify-content: center;
+}
+
+.plus, .plus2 {
+    position: absolute;
+    top: 42px;
+    right: 240px;
+    opacity: 50%;
+}
+
+.pinned, .delete, .edit {
+    z-index: 10;
+}
+
+.pinned {
+    background: url("pinned.png");
+    width: 32px;
+    height: 32px;
+    margin-top: -210px;
+    margin-left: 165px;
+    margin-bottom: 60px;
+    visibility: hidden;
+}
+
+.delete {
+    background: url("del.png");
+    width: 32px;
+    height: 32px;
+    /*margin-top: -110px;*/
+    margin-left: 10px;
+    margin-bottom: 5px;
+}
+
+.edit {
+    background: url("edit.png");
+    width: 32px;
+    height: 32px;
+    margin-left: 10px;
+    margin-bottom: 5px;
+}
+
+.pin {
+    background: url("pin.png");
+    width: 32px;
+    height: 32px;
+    margin-left: 10px;
+}
+
+#input2 {
+    top: 120px;
+    width: 45%;
+    background-color: darkgray;
+}
+
+#color_selector2 {
+    top: 122px;
+    right: 393px;
+}
+
+#plus2 {
+    top: 127px;
+    right: 350px;
+}
+
+#input2, #color_selector2, #plus2 {
+    display: none;
+}
